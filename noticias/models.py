@@ -24,4 +24,4 @@ class Noticia(models.Model):
         return self.title
 
     class Meta(object):
-        ordering = ['-is_published']
+        ordering = ['-pub_date']

@@ -20,13 +20,13 @@ urlpatterns = patterns('',
     url(r'^noticias/$', views.Noticias.as_view(), name="noticias"),
 
     # Create view
-    #url(r'^noticia/create/$', views.CreateNoticia.as_view(), name="create_noticia"),
+    url(r'^noticia/create/$', views.CreateNoticia.as_view(), name="create_noticia"),
     # Update view
     url(r'^noticia/update/(?P<pk>\d+)/$', views.UpdateNoticia.as_view(), name="update_noticia"),
     # Detail view
     url(r'^noticia/(?P<pk>\d+)/$', views.Noticia.as_view(), name="noticia"),
     # Delete view
-    #url(r'^noticia/delete/(?P<pk>\d+)/$', views.DeleteNoticia.as_view(), name="delete_noticia"),
+    url(r'^noticia/delete/(?P<pk>\d+)/$', views.DeleteNoticia.as_view(), name="delete_noticia"),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

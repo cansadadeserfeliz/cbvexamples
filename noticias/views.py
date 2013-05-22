@@ -4,7 +4,10 @@ from django.views.generic import (
     ListView,
     DetailView,
     UpdateView,
+    CreateView,
+    DeleteView,
 )
+from django.core.urlresolvers import reverse_lazy
 
 from noticias.models import Noticia as NoticiasModel
 from noticias.forms  import NoticiaForm
@@ -23,3 +26,14 @@ class UpdateNoticia(UpdateView):
     model = NoticiasModel
     template_name = "noticias/form.html"
     form_class = NoticiaForm
+    success_url = reverse_lazy("noticias")
+
+class CreateNoticia(CreateView):
+    model = NoticiasModel
+    template_name = "noticias/form.html"
+    form_class = NoticiaForm
+    success_url = reverse_lazy("noticias")
+
+class DeleteNoticia(DeleteView):
+    model = NoticiasModel
+    success_url = reverse_lazy("noticias")
