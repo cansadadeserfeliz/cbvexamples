@@ -37,3 +37,4 @@ class CreateNoticia(CreateView):
 class DeleteNoticia(DeleteView):
     model = NoticiasModel
     success_url = reverse_lazy("noticias")
+    template_name = "noticias/delete_confirm.html"
