@@ -28,6 +28,18 @@ urlpatterns = patterns('',
     # Delete view
     url(r'^noticia/delete/(?P<pk>\d+)/$', views.DeleteNoticia.as_view(), name="delete_noticia"),
 
+
+
+    # Solo noticias sobre cine
+    url(r'^noticias_de_cine/$', views.NoticiasDeCine.as_view(), name="noticias_de_cine"),
+    # Paginated
+    url(r'^noticias_paginated/$', views.NoticiasPaginated.as_view(), name="noticias_paginated"),
+    # Get Rubrica by slug
+    url(r'^rubrica/(?P<slug>\w+)/$', views.Pubrica.as_view(), name="rubrica"),
+
+    # Sacar Noticias en JSON
+    #url(r'^noticias_json/$', views.NoticiasJSON.as_view(), name="noticias_json"),
+
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
