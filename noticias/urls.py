@@ -37,6 +37,10 @@ urlpatterns = patterns('',
     # Get Rubrica by slug
     url(r'^rubrica/(?P<slug>\w+)/$', views.Pubrica.as_view(), name="rubrica"),
 
+
+    url(r'^contactenos/$', views.Contactenos.as_view(), name="contactenos"),
+    url(r'^gracias/$', TemplateView.as_view(template_name='noticias/gracias.html'), name="gracias"),
+
     # Sacar Noticias en JSON
     #url(r'^noticias_json/$', views.NoticiasJSON.as_view(), name="noticias_json"),
 
