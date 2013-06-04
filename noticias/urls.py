@@ -42,7 +42,7 @@ urlpatterns = patterns('',
     url(r'^gracias/$', TemplateView.as_view(template_name='noticias/gracias.html'), name="gracias"),
 
     # Sacar Noticias en JSON
-    #url(r'^noticias_json/$', views.NoticiasJSON.as_view(), name="noticias_json"),
+    url(r'^noticias_json/$', views.NoticiasJSON.as_view(), name="noticias_json"),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
